@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/Home/APIcalls.js"></script>
+<link href="~/Content/Home.css" rel="stylesheet" />
+
+<div id="topBar" class="row">
+    <div class="col-md-6">
+        <div class="input-group">
+            <input type="text" id="shortcodeInput" class="form-control" placeholder="Enter Airport Shortcode...">
+            <span class="input-group-btn">
+                <button id="searchBtn" class="btn btn-secondary" type="button">Go!</button>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <p id="displayBox"></p>
+    </div>
+</div>
