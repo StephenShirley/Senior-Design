@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Net;
 using System.Web.Mvc;
+using Prototype.Utilities;
 
 namespace Prototype.Controllers
 {
@@ -23,6 +24,15 @@ namespace Prototype.Controllers
             return Json(information, JsonRequestBehavior.AllowGet);
         }
         
+        public JsonResult getFlightSchedule(string airCode, string fn, string year, string month, string day)
+        {
+            string requestUrl = ApiKeys.fsScheduledFlightsByCarrierFNDate + airCode + "/" + fn + "/departing/" + year + "/" + month + "/" + day + "?appId=" + ApiKeys.fsAppID + "&appKey=+" + ApiKeys.fsAppKey;
+
+            WebClient client = new WebClient();
+            string information = client.DownloadString(requestUrl);
+
+            return Json(information, JsonRequestBehavior.AllowGet);
+        }
 
         public ActionResult About()
         {
