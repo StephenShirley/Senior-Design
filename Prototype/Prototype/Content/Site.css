@@ -9,6 +9,13 @@
     padding-right: 15px;
 }
 
+#logoImg {
+    float: left;
+    width: 40px;
+    margin-top: 12px;
+    margin-right: 15px;
+}
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
